@@ -65,7 +65,7 @@ class Task {
   
     /** Method that set the name of the task, only if the task is valid */
     changeName(value) {
-      if ((value.length >= 6 && value.length <= 20)
+      if ((value.length >= 6 && value.length <= 30)
         && (value !== null) && (value !== undefined)
         && (value !== '')) {
         this.name = value;
@@ -113,9 +113,9 @@ const newline = () => console.log("\n * * * * * \n");
 
 const board = new Board();
 
-const task1 = new Task('Validate fields', new Date('2025/09/03'));
-const task2 = new Task('Write unit tests', new Date('2025/09/04'));
-const task3 = new Task('Remove console.log', new Date('2025/09/05'));
+const task1 = new Task('Task 1 - go hiking', new Date('2029/09/03'));
+const task2 = new Task('Task 2 - return home', new Date('2029/09/04'));
+const task3 = new Task('Task 3 - watch some movies', new Date('2029/09/05'));
 
 console.log(board.toString());
 
@@ -138,4 +138,4 @@ console.log(task1.toString());
 
 newline();
 
-console.log(`board.itemCount: ${board.tasks.length}`);
+console.log(`Total tasks written on the board: ${board.tasks.length}`);
